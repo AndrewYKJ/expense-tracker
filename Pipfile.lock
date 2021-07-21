@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "362d005a78757e7bb807aba36523e8df96d861cc383f96c83f684890a64d93e1"
+            "sha256": "9b1a9849c34646827269afe970149d3735eed0f7f99caa8978ae3120c1bc2a5a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -77,6 +77,14 @@
             ],
             "version": "==2021.1"
         },
+        "six": {
+            "hashes": [
+                "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
+                "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
+            ],
+            "index": "pypi",
+            "version": "==1.16.0"
+        },
         "sqlparse": {
             "hashes": [
                 "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0",
@@ -84,6 +92,13 @@
             ],
             "markers": "python_version >= '3.5'",
             "version": "==0.4.1"
+        },
+        "validate-email": {
+            "hashes": [
+                "sha256:784719dc5f780be319cdd185dc85dd93afebdb6ebb943811bc4c7c5f9c72aeaf"
+            ],
+            "index": "pypi",
+            "version": "==1.3"
         },
         "whitenoise": {
             "hashes": [

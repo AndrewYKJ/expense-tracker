@@ -11,12 +11,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import django_heroku
-
+from django.contrib import messages
 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'expenses'
+    'expenses',
+    'userpreferences',
+    'userincome'
 ]
 
 MIDDLEWARE = [
@@ -131,6 +133,20 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+#MESSAGE
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# email stuff
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ykj.testbot@gmail.com'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'ykj.testbot@gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_PASSWORD = 'MrAndrew1996'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
